@@ -1,0 +1,20 @@
+<div class="authorization">
+  <h5>Write Mail or User ID</h5>
+  <div class="p-field">
+    <input id="username1" type="username" aria-describedby="username1-help" pInputText [(ngModel)]="value1" />
+    <small *ngIf="!Alert1" id="username1-help">Unable to login. This email address is associated with more than one user account.</small>
+    <small *ngIf="!Alert2" id="username2-help">Invalid credentials. This account is now locked after 5 unsuccessful login attemps.</small>
+    <small *ngIf="!Alert3" id="username3-help">Unable to login. Invalid credentials.</small>
+    <small *ngIf="!Alert4" id="username4-help">Please input a new password:</small>
+    <small *ngIf="!Alert5" id="username5-help">Unable to login. This user account is either locked or inactive.</small>
+  </div>
+  <div>
+    <h5>Password</h5>
+    <p-password [(ngModel)]="value2" [toggleMask]="true"></p-password>
+  </div>
+  <div class="button">
+    <h5>
+      <p-button (click)="authorization()" label="Login"></p-button>
+    </h5>
+  </div>
+</div>
