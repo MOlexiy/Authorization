@@ -1,0 +1,37 @@
+﻿Выполняется установка сборки 'G:\AUTHORIZATION\WindowsService\WindowsService\bin\Debug\WindowsService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = G:\AUTHORIZATION\WindowsService\WindowsService\bin\Debug\WindowsService.InstallLog
+   assemblypath = G:\AUTHORIZATION\WindowsService\WindowsService\bin\Debug\WindowsService.exe
+Отсутствуют общие программы установки с атрибутом RunInstallerAttribute.Yes в сборке G:\AUTHORIZATION\WindowsService\WindowsService\bin\Debug\WindowsService.exe.
+Выполняется фиксация сборки 'G:\AUTHORIZATION\WindowsService\WindowsService\bin\Debug\WindowsService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = G:\AUTHORIZATION\WindowsService\WindowsService\bin\Debug\WindowsService.InstallLog
+   assemblypath = G:\AUTHORIZATION\WindowsService\WindowsService\bin\Debug\WindowsService.exe
+Отсутствуют общие программы установки с атрибутом RunInstallerAttribute.Yes в сборке G:\AUTHORIZATION\WindowsService\WindowsService\bin\Debug\WindowsService.exe.
+Удалите файл InstallState, поскольку отсутствуют программы установки.
+Выполняется удаление сборки 'G:\AUTHORIZATION\WindowsService\WindowsService\bin\Debug\WindowsService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = G:\AUTHORIZATION\WindowsService\WindowsService\bin\Debug\WindowsService.InstallLog
+   assemblypath = G:\AUTHORIZATION\WindowsService\WindowsService\bin\Debug\WindowsService.exe
+Выполняется удаление источника EventLog WindowsService.
+Предупреждение. Источник WindowsService не зарегистрирован на локальном компьютере.
+Выполняется удаление службы WindowsService из системы...
+При выполнении программы установки System.ServiceProcess.ServiceInstaller во время установки возникло исключение.
+System.ComponentModel.Win32Exception: Указанная служба не установлена
+При удалении из системы возникло исключение. Это исключение будет проигнорировано, и удаление из системы будет продолжено. Однако после завершения удаления данное приложение может оказаться не полностью удаленным.
+Выполняется установка сборки 'G:\AUTHORIZATION\WindowsService\WindowsService\bin\Debug\WindowsService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = G:\AUTHORIZATION\WindowsService\WindowsService\bin\Debug\WindowsService.InstallLog
+   assemblypath = G:\AUTHORIZATION\WindowsService\WindowsService\bin\Debug\WindowsService.exe
+Устанавливается служба WindowsService...
+Служба WindowsService успешно установлена.
+Создается исходный EventLog WindowsService в журнале Application...
+Выполняется фиксация сборки 'G:\AUTHORIZATION\WindowsService\WindowsService\bin\Debug\WindowsService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = G:\AUTHORIZATION\WindowsService\WindowsService\bin\Debug\WindowsService.InstallLog
+   assemblypath = G:\AUTHORIZATION\WindowsService\WindowsService\bin\Debug\WindowsService.exe
