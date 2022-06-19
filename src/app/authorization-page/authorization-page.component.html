@@ -1,20 +1,20 @@
-<div class="authorization">
-  <h5>Write Mail or User ID</h5>
-  <div class="p-field">
-    <input id="username1" type="username" aria-describedby="username1-help" pInputText [(ngModel)]="value1" />
-    <small *ngIf="!Alert1" id="username1-help">Unable to login. This email address is associated with more than one user account.</small>
-    <small *ngIf="!Alert2" id="username2-help">Invalid credentials. This account is now locked after 5 unsuccessful login attemps.</small>
-    <small *ngIf="!Alert3" id="username3-help">Unable to login. Invalid credentials.</small>
-    <small *ngIf="!Alert4" id="username4-help">Please input a new password:</small>
-    <small *ngIf="!Alert5" id="username5-help">Unable to login. This user account is either locked or inactive.</small>
-  </div>
-  <div>
-    <h5>Password</h5>
-    <p-password [(ngModel)]="value2" [toggleMask]="true"></p-password>
-  </div>
-  <div class="button">
-    <h5>
-      <p-button (click)="authorization()" label="Login"></p-button>
-    </h5>
-  </div>
-</div>
+<p-dialog [(visible)]="loginDialog" [style]="{width: '450px'}" header="Login Page" [modal]="true" styleClass="p-fluid">
+  <ng-template pTemplate="content" [formGroup]="userLoginFrom">
+    <div class="authorization">
+      <h5>email or User ID</h5>
+      <div class="p-field">
+        <input type="text" pInputText id="emailOrUsrId" formControlName="emailOrUsrId"/>
+      </div>
+      <div>
+        <h5>Password</h5>
+        <p-password id="password" formControlName="password" [toggleMask]="true"></p-password>
+      </div>
+    </div>
+  </ng-template>
+
+  <ng-template pTemplate="footer">
+    <button pButton pRipple label="Cancel" icon="pi pi-times" class="p-button-text" (click)="hideDialog()"></button>
+    <button pButton pRipple label="Login" [disabled]="!userLoginFrom.valid"  icon="pi pi-check" class="p-button-text" (click)="authorization()"></button>
+  </ng-template>
+</p-dialog>
+<app-change-password [authWindow]="emailOrUsrId" #changePassWindow></app-change-password>

@@ -1,2 +1,6 @@
-<app-authorization-page></app-authorization-page>
-<!--<app-loggin-success></app-loggin-success>-->
+<p-toolbar styleClass="p-mb-4">
+  <ng-template pTemplate="left">
+    <button pButton pRipple label="Login" class="p-button-success" (click)="openNew()"></button>
+  </ng-template>
+</p-toolbar>
+<app-authorization-page #authWindow></app-authorization-page>
