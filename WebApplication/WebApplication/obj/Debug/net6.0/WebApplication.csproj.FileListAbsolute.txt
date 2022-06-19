@@ -1,8 +1,0 @@
-G:\AUTHORIZATION\WebApplication\WebApplication\obj\Debug\net6.0\WebApplication.csproj.AssemblyReference.cache
-G:\AUTHORIZATION\WebApplication\WebApplication\obj\Debug\net6.0\WebApplication.GeneratedMSBuildEditorConfig.editorconfig
-G:\AUTHORIZATION\WebApplication\WebApplication\obj\Debug\net6.0\WebApplication.AssemblyInfoInputs.cache
-G:\AUTHORIZATION\WebApplication\WebApplication\obj\Debug\net6.0\WebApplication.AssemblyInfo.cs
-G:\AUTHORIZATION\WebApplication\WebApplication\obj\Debug\net6.0\WebApplication.csproj.CoreCompileInputs.cache
-G:\AUTHORIZATION\WebApplication\WebApplication\obj\Debug\net6.0\WebApplication.MvcApplicationPartsAssemblyInfo.cache
-G:\AUTHORIZATION\WebApplication\WebApplication\obj\Debug\net6.0\WebApplication.RazorAssemblyInfo.cache
-G:\AUTHORIZATION\WebApplication\WebApplication\obj\Debug\net6.0\WebApplication.RazorAssemblyInfo.cs

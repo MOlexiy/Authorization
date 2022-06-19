@@ -1,8 +1,6 @@
-import {Component, Inject, OnInit} from '@angular/core';
-import {Http} from "@angular/http"
-import {HttpClient, HttpHeaders} from "@angular/common/http";
-import {catchError, map} from 'rxjs/operators';
-import { of } from 'rxjs';
+import {Component,  OnInit} from '@angular/core';
+import {HttpClient} from "@angular/common/http";
+import {Observable} from 'rxjs';
 
 @Component({
   selector: 'app-authorization-page',
@@ -10,7 +8,6 @@ import { of } from 'rxjs';
   styleUrls: ['./authorization-page.component.css']
 })
 export class AuthorizationPageComponent implements OnInit {
-  myAppUrl: string = ""
   value1: string = "";
   value2: string = "";
   Alert1: boolean = true;
@@ -21,22 +18,20 @@ export class AuthorizationPageComponent implements OnInit {
   temp: string = ""
   rezultApi!: {countEmail: number, lockAcount: number, nowLockAcount: number, invalidCred: number, tempPassword: number, loginSuccess: number}
 
-  // constructor(private _http: Http, @Inject('BASE_URL') baseUrl: string) {
-  //   this.myAppUrl = baseUrl;
-  // }
   constructor(private http: HttpClient) { }
 
   authorization(){
-    // this.rezultApi = this.checkAuthorization();
     this.Alert2 = !this.Alert2;
     this.checkAuthorization();
   }
 
   checkAuthorization(){
-    console.debug("1")
-    return this.http.get("http://localhost:9000/" + "api/Aplpha1s/check/" + this.value1 + "/" + this.value2)
-      .pipe(map(res => console.debug("2"))),
-      catchError(err => of (err))
+    this.getAuthorizationData().subscribe(m => this.rezultApi = m)
+    console.debug(this.rezultApi)
+  }
+
+  getAuthorizationData():Observable<any>{
+    return this.http.get("http://localhost:5236/" + "api/Alpha1es/" + this.value1 + "/" + this.value2)
   }
 
   ngOnInit(): void {
