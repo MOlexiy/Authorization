@@ -16,6 +16,8 @@ import {ToolbarModule} from "primeng/toolbar";
 
 import { ConfirmationService, MessageService } from "primeng/api";
 import { ChangePasswordComponent } from './change-password/change-password.component';
+import {ConfirmPopupModule} from "primeng/confirmpopup";
+import {ToastModule} from "primeng/toast";
 
 @NgModule({
   declarations: [
@@ -23,20 +25,22 @@ import { ChangePasswordComponent } from './change-password/change-password.compo
     AuthorizationPageComponent,
     ChangePasswordComponent
   ],
-    imports: [
-        AccordionModule,
-        BrowserModule,
-        ButtonModule,
-        BrowserAnimationsModule,
-        DividerModule,
-        FormsModule,
-        InputTextModule,
-        HttpClientModule,
-        PasswordModule,
-        DialogModule,
-        ReactiveFormsModule,
-        ToolbarModule
-    ],
+  imports: [
+    AccordionModule,
+    BrowserModule,
+    ButtonModule,
+    BrowserAnimationsModule,
+    DividerModule,
+    FormsModule,
+    InputTextModule,
+    HttpClientModule,
+    PasswordModule,
+    DialogModule,
+    ReactiveFormsModule,
+    ToolbarModule,
+    ConfirmPopupModule,
+    ToastModule
+  ],
   providers: [ConfirmationService, MessageService],
   bootstrap: [AppComponent]
 })

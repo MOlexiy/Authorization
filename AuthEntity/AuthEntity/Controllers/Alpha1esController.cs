@@ -71,11 +71,11 @@ namespace AuhorizationEntity.Controller
               {
                 if (email.pwd_last_updated.ToString() == "")
                 {
-                  tempPassword = 0;
+                  tempPassword = 1;
                 }
                 if (email.pwd_last_updated < DateTime.Today.AddMonths(-3))
                 {
-                  tempPassword = 0; // Please input a new password:
+                  tempPassword = 1; // Please input a new password:
                 }
                 else
                 {
@@ -97,7 +97,7 @@ namespace AuhorizationEntity.Controller
       return rezult;
     }
 
-    [HttpPut("{emailAddr}/{oldPass}/{newPassword}")]
+    [HttpGet("{emailAddr}/{oldPass}/{newPassword}")]
     public async Task<ActionResult<int>> ChangePassword(string emailAddr, string oldPass, string newPassword)
     {
       List<Alpha1s> emails = _context.Alpha1s

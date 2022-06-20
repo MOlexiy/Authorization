@@ -74,6 +74,13 @@ export class AuthorizationPageComponent implements OnInit {
           detail: "Please input a new password."
         });
       }
+      if (this.rezultApi[0] === 0 && this.rezultApi[1] === 0 && this.rezultApi[2] === 0 && this.rezultApi[3] === 0 && this.rezultApi[4] === 0 && this.rezultApi[5] === 0){
+        console.debug("yep")
+        this.messageService.add({
+          summary: "Unable to login",
+          detail: "Incorrect email or userId."
+        });
+      }
     }
   }
 

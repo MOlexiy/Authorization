@@ -1,4 +1,4 @@
-<p-dialog [(visible)]="loginDialog" [style]="{width: '450px'}" header="Login Page" [modal]="true" styleClass="p-fluid">
+<p-dialog [(visible)]="loginDialog" [style]="{width: '450px', height: '450px'}" header="Login Page" [modal]="true" styleClass="p-fluid">
   <ng-template pTemplate="content" [formGroup]="userLoginFrom">
     <div class="authorization">
       <h5>email or User ID</h5>
@@ -18,3 +18,4 @@
   </ng-template>
 </p-dialog>
 <app-change-password [authWindow]="emailOrUsrId" #changePassWindow></app-change-password>
+<p-toast></p-toast>

@@ -33,24 +33,17 @@ export class ChangePasswordComponent implements OnInit {
   )
 
   async changePasswords(){
-    console.debug(this.authWindow)
     if (this.changePasswordFrom.valid){
-      console.debug(this.authWindow, this.changePasswordFrom.value.oldPassword, this.changePasswordFrom.value.newPassword)
       await this.checkValid(this.authWindow, this.changePasswordFrom.value.oldPassword, this.changePasswordFrom.value.newPassword)
       if (this.resultPut === 0){
-        this.changePassword = false;
-        this.submited = true;
-        this.confirmationService.confirm({
-          accept: () => {
-            this.messageService.add({
-              summary: "Unable to change password",
-              detail: "Old password is incorrect."
-            });
-          }
-        })
-
+        this.messageService.add({
+          summary: "Unable to change password",
+          detail: "Old password is incorrect."
+        });
       }
       if (this.resultPut === 1){
+        this.changePassword = false;
+        this.submited = true;
         this.messageService.add({
           summary: "Complete",
           detail: "Password is change."
@@ -60,7 +53,7 @@ export class ChangePasswordComponent implements OnInit {
   }
 
   async checkValid(emailAdd: string, oldPass: string, newPass: string){
-    await this.putChangePassword(emailAdd, oldPass, newPass).subscribe(resultPut => this.resultPut = resultPut)
+    await this.putChangePassword(emailAdd, oldPass, newPass).subscribe(result => this.resultPut = result)
   }
 
   putChangePassword(emailAddr: string, oldPass: string, newPassword: string) : Observable<any>
